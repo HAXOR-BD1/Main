@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You - NSC App</title>
+  <style>
+    /* Full-page background */
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('background.webp') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* The content box (card) */
+    .container {
+      background: rgba(255, 255, 255, 0.97); /* Transparent white box */
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+      text-align: center;
+      max-width: 500px;
+      width: 90%;
+    }
+
+    /* Logo styling */
+    .logo {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: #004466;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #333;
+      font-size: 16px;
+    }
+
+    a.download-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #004466;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    a.download-link:hover {
+      background: #002f3f;
+    }
+  </style>
+
+  <script>
+    window.onload = function() {
+      const link = document.createElement("a");
+      link.href = "nsc-portal.apk";
+      link.download = "nsc-portal.apk";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    };
+  </script>
+</head>
+<body>
+  <div class="container">
+    <img src="logo.png" alt="NSC Logo" class="logo">
+    <h1>Thank You!</h1>
+    <p>Your download of the <strong>Northern Samar Colleges Portal App</strong> has started.</p>
+    <p>If it doesn't start automatically, <a href="nsc-portal.apk" download class="download-link">click here</a>.</p>
+  </div>
+</body>
+</html>
